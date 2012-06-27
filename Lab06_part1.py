@@ -20,13 +20,42 @@ torres		| 6/21/2012	| 1
 """
 
 ## create the player_stats data structure
-
+player_stats={'rooney':[(datetime.date(2012,06,23),2),
+              (datetime.date(2012,06,25),2)],
+              'ronaldo':[(datetime.date(2012,06,19),0),
+              (datetime.date(2012,06,20),3)],
+              'torres':[(datetime.date(2012,06,21),0),
+              (datetime.date(2012,06,21),1)]}
+"""
+keyname=str(raw_input("enter the name of the player: "))
+for key,value in player_stats.iteritems():
+    if key==keyname:"""
+for key,value in player_stats.iteritems():
+            print key
+            for i in value:
+                print i
 
 ## implement highest_score
 
-
+def highest_score(player_stats):
+    max_score=0
+    score=0
+    for key,value in player_stats.iteritems():
+            for date,goal in value:
+                match_date=date
+                score=goal
+                if max_score<score:
+                    max_score=score
+                    
+                    
 ## implement highest_score_for_player
 
 
 
 ## implement highest_scorer
+
+
+
+
+
+
